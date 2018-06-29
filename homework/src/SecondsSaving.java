@@ -1,68 +1,97 @@
 public class SecondsSaving {
 
 
+
     public SecondsSaving(int input) {
-        this.setSeconds(input);
-        this.setSecondsLeft();
+        this.setSeconds(input); // записываем количесвто секунд в наш класс.
         return;
     }
 
 
-    private int seconds;
+    private int seconds; //наше хранение секунд, с геттером
+    private int secondsLeft;
+    private int minsLeft ;
+    private int hoursLeft;
+    private int daysLeft;
 
-    public void setSeconds(int seconds) {
-        this.seconds = seconds;
+    public void calculateAll(){
+        this.calculateSecondsLeft();  // высчитываем, сколько секунд осталось "лишних"
+        this.calculateMinsLeft(); // считаем, сколько минут осталось "лишних"
+        this.calculateHoursLeft(); // считаем, сколько часов осталось
+        this.calculateDaysLeft(); // считаем, сколько дней осталось
+        return;
+    }
+
+    private void setSeconds(int secs) {
+        this.seconds = secs;
     }
 
     public int getSeconds() {
-        return seconds;
+
+        return this.seconds;
     }
 
-
-    private int secondsLeft;
-    private void setSecondsLeft() {
-        this.secondsLeft = this.seconds%60;
+    // Считаем секунды, которые "не поместятся" в минуты". Метод для подсчёта и "геттер" для чтения
+    private void calculateSecondsLeft() {
+        secondsLeft = this.seconds%60;
     }
+
     public int getSecondsLeft() {
+
         return secondsLeft;
     }
 
 
+
+    //считаем, сколько всего целых минут
     public int getMins(){
-        int mins = (seconds - secondsLeft)/60;
+        int mins = seconds / 60;
         return mins;
     }
 
-    public int getMinsLeft() {
-        return minsLeft = this.getMins()%60;
+    //Минуты, которые не помещаются в часы.
+    public int calculateMinsLeft() {
+        return minsLeft = getMins() % 60;
     }
 
-    private int minsLeft ;
+    public int getMinsLeft() {
+        return minsLeft;
+    }
 
+    //считаем, сколько всего целых часов
     public int getHours(){
-        int hours = (seconds - minsLeft)/60;
+        int hours = getMins()/60;
         return hours;
     }
+    // считаем часы, не поместившиеся в дни
+    public int calculateHoursLeft() {
 
+        return hoursLeft = getHours()%24;
+    }
     public int getHoursLeft() {
         return hoursLeft;
     }
 
-    private int hoursLeft = this.getHours()%24;
+    //считаем сколько всего дней
     public int getDays()
     {
-        int days = (this.getHours()-hoursLeft)/24;
+        int days = this.getHours()/24;
         return days;
+    }
+
+    public int calculateDaysLeft() {
+
+        return daysLeft = getDays()%7;
     }
 
     public int getDaysLeft() {
         return daysLeft;
     }
 
-    private int daysLeft = this.getDays()%7;
+
     public int getWeeks()
     {
-        int weeks = (this.getDays()-daysLeft)/7;
+        int weeks = this.getDays()/7;
         return weeks;
     }
 
