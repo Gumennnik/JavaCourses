@@ -18,5 +18,5 @@ public class TaskOne {
     // Имеется 4500 секунд
     // .
     // Вывести в консоль содержащихся в этом количестве секунд:
-
+    SecondsSaving a = new SecondsSaving(500);
 }
