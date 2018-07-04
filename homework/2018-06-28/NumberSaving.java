@@ -6,6 +6,10 @@ public class NumberSaving {
         return;
     }
 
+    public int getTargenNumber() {
+        return targenNumber;
+    }
+
     int targenNumber;
 
 
@@ -26,16 +30,49 @@ public class NumberSaving {
         return targenNumber%2 == 0;
     }
 
-    public void reverseIfFourNumbers()
+    public void reverseIfFourNumbersAndSyso()
     {
-        if (targenNumber >= 0 && targenNumber < 10000)
+        if (targenNumber > 999 && targenNumber < 10000)
         {
             String saveNumberAsString = Integer.toString(targenNumber);
             char[] CharArray = saveNumberAsString.toCharArray();
             saveNumberAsString = Character.toString(CharArray[3])+Character.toString(CharArray[2])+Character.toString(CharArray[1])+Character.toString(CharArray[0]);
             System.out.println("reversed is " + saveNumberAsString);
         }
-        else System.out.println("Число "+ targenNumber +" не трёхзначное");
+        else System.out.println("Число "+ targenNumber +" не четырёхзначное");
+
+    }
+
+    public void allNubersAreDiferent()
+    {
+        System.out.println("Текущее число "+targenNumber);
+        if (targenNumber > 999 && targenNumber < 10000)
+        {
+            String saveNumberAsString = Integer.toString(targenNumber);
+            char[] charArray = saveNumberAsString.toCharArray();
+            int counter = 0;
+            for (char a:charArray
+                 ) {
+
+                for (int i = charArray.length -1; i >= 0; i--)
+                {
+                    if (a == charArray[i])
+                    {
+                            counter++;
+                    }
+                }
+            }
+            if (counter > 4)
+            {
+                System.out.println("Есть совподающие цифры");
+            }
+            else {
+                System.out.println("Все цифры разные");
+            }
+
+
+        }
+        else System.out.println("Число "+ targenNumber +" не четырёхзначное");
 
     }
     //создаём число

@@ -8,7 +8,7 @@ public class Task_Runner
         Task4.run();
         Task4.run();
         Task5.run();
-
+        Task6.run();
     }
 
 }

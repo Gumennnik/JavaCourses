@@ -4,6 +4,19 @@ public class Geometry {
         this.b = b;
         this.r = r;
     }
+
+    public int getA() {
+        return a;
+    }
+
+    public int getB() {
+        return b;
+    }
+
+    public int getR() {
+        return r;
+    }
+
     private int a;
     private int b;
     private int r;
