@@ -1,3 +1,5 @@
+import java.net.Inet4Address;
+
 public class NumberSaving {
     public NumberSaving( int input) {
         targenNumber = input;
@@ -24,6 +26,18 @@ public class NumberSaving {
         return targenNumber%2 == 0;
     }
 
+    public void reverseIfFourNumbers()
+    {
+        if (targenNumber >= 0 && targenNumber < 10000)
+        {
+            String saveNumberAsString = Integer.toString(targenNumber);
+            char[] CharArray = saveNumberAsString.toCharArray();
+            saveNumberAsString = Character.toString(CharArray[3])+Character.toString(CharArray[2])+Character.toString(CharArray[1])+Character.toString(CharArray[0]);
+            System.out.println("reversed is " + saveNumberAsString);
+        }
+        else System.out.println("Число "+ targenNumber +" не трёхзначное");
+
+    }
     //создаём число
     // Определяем количество знаков
     // если знаков 3 - сигналим.
