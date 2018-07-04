@@ -8,6 +8,11 @@ public class MoneyAnswerer {
 
     public String toString()
     {
+        if (moneyCount%100 < 20 && moneyCount%100 > 10)
+        {
+            return Integer.toString(moneyCount)+" рублей";
+        }
+
         int lastInt = moneyCount % 10;
         switch (lastInt)
         {
