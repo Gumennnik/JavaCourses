@@ -1,10 +1,10 @@
 public class Task6 {
-    public static void run()
+    public static void run(int input)
     {
 
         String newLine = System.getProperty("line.separator");
         System.out.println("Starting task 6 " + newLine);
-        NumberSaving a = new NumberSaving(5662);
+        NumberSaving a = new NumberSaving(input);
         a.allNubersAreDiferent();
 
 
