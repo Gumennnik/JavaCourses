@@ -19,12 +19,8 @@ public class MoneyAnswerer {
             case 1:{
                 return Integer.toString(moneyCount)+" рубль";
             }
-            case 2:{
-                return Integer.toString(moneyCount)+" рубля";
-            }
-            case 3:{
-                return Integer.toString(moneyCount)+" рубля";
-            }
+            case 2:
+            case 3:
             case 4:{
                 return Integer.toString(moneyCount)+" рубля";
             }
