@@ -1,3 +1,5 @@
+import com.sun.xml.internal.fastinfoset.util.CharArray;
+
 import java.net.Inet4Address;
 
 public class NumberSaving {
@@ -53,16 +55,15 @@ public class NumberSaving {
             int counter = 0;
             for (char a:charArray
                  ) {
-
-                for (int i = charArray.length -1; i >= 0; i--)
-                {
-                    if (a == charArray[i])
+                    for (int i = charArray.length -1; i >= 0; i--)
                     {
-                            counter++;
+                        if (a == charArray[i])
+                        {
+                                counter++;
+                        }
                     }
-                }
             }
-            if (counter > 4)
+            if (counter > charArray.length)
             {
                 System.out.println("Есть совподающие цифры");
             }
@@ -75,11 +76,7 @@ public class NumberSaving {
         else System.out.println("Число "+ targenNumber +" не четырёхзначное");
 
     }
-    //создаём число
-    // Определяем количество знаков
-    // если знаков 3 - сигналим.
-    // определяем, является ли его последняя цифра семёркой
-    // Определите, является ли число чётным.
+
 
 
 
