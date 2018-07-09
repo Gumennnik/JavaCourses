@@ -37,7 +37,8 @@ public class Task_Runner {
 //        taskArraySumm.printBetweenMinAndMax();
 
         //task Seven
-
+        TaskWithButterflyArray taskWithButterflyArray = new TaskWithButterflyArray(11);
+        taskWithButterflyArray.generateArray();
 
 
 
