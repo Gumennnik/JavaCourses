@@ -1,3 +1,5 @@
+package com.buturlia.homework_2018_07_05;
+
 public class TaskFindSumm {
     public TaskFindSumm(int count, int divide) {
         this.count = count;

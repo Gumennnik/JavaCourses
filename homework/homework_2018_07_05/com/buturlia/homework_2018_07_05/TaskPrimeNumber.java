@@ -1,3 +1,5 @@
+package com.buturlia.homework_2018_07_05;
+
 public class TaskPrimeNumber {
 
     private int targetNumber;
