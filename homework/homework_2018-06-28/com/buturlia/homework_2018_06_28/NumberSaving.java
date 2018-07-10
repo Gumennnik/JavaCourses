@@ -1,4 +1,4 @@
-package homework_2018_06_28;
+package com.buturlia.homework_2018_06_28;
 
 import com.sun.xml.internal.fastinfoset.util.CharArray;
 

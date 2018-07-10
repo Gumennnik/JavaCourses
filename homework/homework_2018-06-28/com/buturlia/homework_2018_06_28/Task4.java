@@ -1,4 +1,4 @@
-package homework_2018_06_28;
+package com.buturlia.homework_2018_06_28;
 
 import java.util.Random;
 

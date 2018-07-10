@@ -1,4 +1,4 @@
-package homework_2018_06_28;
+package com.buturlia.homework_2018_06_28;
 
 public class Geometry {
     public Geometry(int a,int b, int r) {
