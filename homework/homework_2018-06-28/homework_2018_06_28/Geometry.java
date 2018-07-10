@@ -1,3 +1,5 @@
+package homework_2018_06_28;
+
 public class Geometry {
     public Geometry(int a,int b, int r) {
         this.a = a;

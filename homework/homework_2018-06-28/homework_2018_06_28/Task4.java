@@ -1,3 +1,5 @@
+package homework_2018_06_28;
+
 import java.util.Random;
 
 public class Task4 {

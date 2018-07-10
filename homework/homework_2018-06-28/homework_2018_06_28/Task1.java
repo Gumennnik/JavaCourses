@@ -1,3 +1,5 @@
+package homework_2018_06_28;
+
 public class Task1 {
 
     public static void run(int parametr)

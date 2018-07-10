@@ -1,3 +1,5 @@
+package homework_2018_06_28;
+
 public class MoneyAnswerer {
     public MoneyAnswerer(int input) {
         this.moneyCount = input;
