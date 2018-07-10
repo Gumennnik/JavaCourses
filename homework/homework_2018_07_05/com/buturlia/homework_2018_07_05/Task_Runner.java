@@ -1,23 +1,22 @@
 package com.buturlia.homework_2018_07_05;
 
-import com.buturlia.homework_2018_07_05.*;
-
 public class Task_Runner {
     public static void main(String[] args) {
 
+
         //Task one: factorial without recursy
         System.out.println("Task One");
-        TaskFactorial factorial = new TaskFactorial(14);
-        System.out.println("Factorial of "+factorial.getFactorial()+ " is " +factorial.calculateFactorial());
+        TaskFactorial taskFactorial = new TaskFactorial(14);
+        System.out.println("Factorial of "+taskFactorial.getFactorial()+ " is " +taskFactorial.calculateFactorial());
 
         //Task two
         System.out.println("Task two");
-        TaskPrimeNumber primeNumber = new TaskPrimeNumber(127);
+        TaskPrimeNumber taskPrimeNumber = new TaskPrimeNumber(127);
         System.out.println(" ");
-        System.out.print("Is number " + primeNumber.getTargetNumber() + " prime? "+primeNumber.chekIfNumberIsPrime());
-        if( !primeNumber.chekIfNumberIsPrime() )
+        System.out.print("Is number " + taskPrimeNumber.getTargetNumber() + " prime? "+taskPrimeNumber.chekIfNumberIsPrime());
+        if( !taskPrimeNumber.chekIfNumberIsPrime() )
         {
-            System.out.print(" It is dividable by " + primeNumber.getDivideNumber());
+            System.out.print(" It is dividable by " + taskPrimeNumber.getDivideNumber());
         }
         System.out.println(" ");
 
