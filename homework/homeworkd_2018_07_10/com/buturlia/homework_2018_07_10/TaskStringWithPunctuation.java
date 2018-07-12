@@ -11,17 +11,50 @@ public class TaskStringWithPunctuation {
 
     public int getPuncuationCount()
     {
+//        int counter = 0;
+//        string.
+//        for (char character:string.toCharArray()
+//             ) {
+//            if (Pattern.matches("\\p{Punct}",Character.toString(character)))
+//            {
+//                counter++;
+//            }
+//
+//        }
+
+
+//        return counter;
+
+        int start = string.indexOf("\\p{Punct}");
         int counter = 0;
-        for (char character:string.toCharArray()
-             ) {
-            if (Pattern.matches("\\p{Punct}",Character.toString(character)))
-            {
-                counter++;
-            }
+//        System.out.println("String lenght is " + string.length());
+        while (start >= 0 && start <= string.length())
+        {
+
+
+            counter++;
+
+//            System.out.println("Counter is " +counter);
+
+            start = string.indexOf("\\p{Punct}",start+1);
+
+//            System.out.println("New start is " + start);
+//            if (counter >= 26 )
+//            {
+//                break;
+//            }
+
 
         }
 
+
+
         return counter;
+
+
+
+
+
     }
 
     public int getCommaCount()

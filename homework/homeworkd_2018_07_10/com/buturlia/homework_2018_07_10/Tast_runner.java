@@ -21,10 +21,10 @@ public class Tast_runner {
 //        System.out.println(TaskCircle.checkIfCirclesTouchingInOneDot(taskCircle,taskCircle12) );
 
         //TaskFour
-        TaskStringWithPunctuation taskStringWithPunctuation = new TaskStringWithPunctuation("awe we  3 , , 3 5, 325,5 ");
+        TaskStringWithPunctuation taskStringWithPunctuation = new TaskStringWithPunctuation("awe we& ?   3 , , 3 5, 325,5 ");
 
-        System.out.println(taskStringWithPunctuation.getCommaCount());
-
+//        System.out.println(taskStringWithPunctuation.getCommaCount());
+        System.out.println(taskStringWithPunctuation.getPuncuationCount());
 
     }
 }
