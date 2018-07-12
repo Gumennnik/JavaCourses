@@ -25,7 +25,7 @@ public class TaskStringWithPunctuation {
 
 //        return counter;
 
-        int start = string.indexOf("\\p{Punct}");
+        int start = string.indexOf(" ");
         int counter = 0;
 //        System.out.println("String lenght is " + string.length());
         while (start >= 0 && start <= string.length())
@@ -38,11 +38,11 @@ public class TaskStringWithPunctuation {
 
             start = string.indexOf("\\p{Punct}",start+1);
 
-//            System.out.println("New start is " + start);
-//            if (counter >= 26 )
-//            {
-//                break;
-//            }
+            System.out.println("New start is " + start);
+            if (counter >= 26 )
+            {
+                break;
+            }
 
 
         }
@@ -50,11 +50,6 @@ public class TaskStringWithPunctuation {
 
 
         return counter;
-
-
-
-
-
     }
 
     public int getCommaCount()

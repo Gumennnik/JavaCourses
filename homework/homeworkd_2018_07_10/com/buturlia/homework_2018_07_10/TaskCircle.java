@@ -4,6 +4,12 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class TaskCircle {
+
+    private double x;
+    private double y;
+    private double r;
+
+
     public TaskCircle(int x, int y, double r) {
         this.x = x;
         this.y = y;
@@ -27,9 +33,6 @@ public class TaskCircle {
         scanner.close();
     }
 
-    private double x;
-    private double y;
-    private double r;
 
     public double getCircumference()
     {
