@@ -1,81 +1,62 @@
 package com.buturlia.homework_2018_07_10;
 
+import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class TaskStringWithPunctuation {
-    private String string;
+    private StringBuffer string;
 
     public TaskStringWithPunctuation(String string) {
-        this.string = string;
+
+        this.string = new  StringBuffer(string);
     }
 
-    public int getPuncuationCount()
+    public int getPuncuationCountWithRegex()
     {
-//        int counter = 0;
-//        string.
-//        for (char character:string.toCharArray()
-//             ) {
-//            if (Pattern.matches("\\p{Punct}",Character.toString(character)))
-//            {
-//                counter++;
-//            }
-//
-//        }
+        int counter =0;
+        Matcher matcher = Pattern.compile("\\p{Punct}").matcher(string);
+
+        while (matcher.find())
+        {
+            counter++;
+        }
+        return counter;
+    }
 
 
-//        return counter;
 
-        int start = string.indexOf(" ");
+
+    public int getPuncuationCountByList()
+    {
+        int counter =0;
+
+        String allPunctuation = "!@#$%^&*(),.?";
+
+        for (char punct:allPunctuation.toCharArray()
+             ) {
+
+            counter += getCommaCount(Character.toString(punct));
+//            System.out.println("There are " + counter + " " + punct  + " here");
+        }
+        return counter;
+    }
+
+
+    public int getCommaCount(String punct)
+    {
         int counter = 0;
-//        System.out.println("String lenght is " + string.length());
+        int start = string.indexOf(punct);
+
         while (start >= 0 && start <= string.length())
         {
 
 
             counter++;
+            start = string.indexOf(punct,start + 1);
 
-//            System.out.println("Counter is " +counter);
-
-            start = string.indexOf("\\p{Punct}",start+1);
-
-            System.out.println("New start is " + start);
-            if (counter >= 26 )
-            {
-                break;
-            }
-
+            break;
 
         }
-
-
-
-        return counter;
-    }
-
-    public int getCommaCount()
-    {
-        int start = string.indexOf(",");
-        int counter = 0;
-//        System.out.println("String lenght is " + string.length());
-        while (start >= 0 && start <= string.length())
-        {
-
-
-           counter++;
-
-//            System.out.println("Counter is " +counter);
-
-            start = string.indexOf(',',start+1);
-
-//            System.out.println("New start is " + start);
-//            if (counter >= 26 )
-//            {
-//                break;
-//            }
-
-
-        }
-
 
 
         return counter;
