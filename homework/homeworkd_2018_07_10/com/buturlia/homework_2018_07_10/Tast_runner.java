@@ -29,9 +29,13 @@ public class Tast_runner {
 //        System.out.println(taskStringWithPunctuation.getPuncuationCountByList());
 //        System.out.println(taskStringWithPunctuation.getPuncuationCountWithRegex());
 
-        //Task Five
+//        //Task Five
 //        TaskAboutWordsCount taskAboutWordsCount = new TaskAboutWordsCount("I'd like to teach the wolrd to fap, in perfect harmony. I'd Like to show you dirty thing for al eternity");
 //        System.out.println(taskAboutWordsCount.countWords());
+
+//        //Task Six
+//        TaskStringAndStringBufferComparation taskStringAndStringBufferComparation = new TaskStringAndStringBufferComparation("begining ");
+//        System.out.println(" Time (in miliseconds) for string minus time of stringbuffer is " + taskStringAndStringBufferComparation.compareStringAndStringBuffer());
 
 
 
