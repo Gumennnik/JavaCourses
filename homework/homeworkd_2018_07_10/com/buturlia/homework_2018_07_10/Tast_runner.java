@@ -30,7 +30,8 @@ public class Tast_runner {
 //        System.out.println(taskStringWithPunctuation.getPuncuationCountWithRegex());
 
         //Task Five
-
+//        TaskAboutWordsCount taskAboutWordsCount = new TaskAboutWordsCount("I'd like to teach the wolrd to fap, in perfect harmony. I'd Like to show you dirty thing for al eternity");
+//        System.out.println(taskAboutWordsCount.countWords());
 
 
 
