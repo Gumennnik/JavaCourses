@@ -40,7 +40,7 @@ public class Tast_runner {
         //Task Seven
         TaskAboutCashDispenserATM taskAboutCashDispenserATM = new TaskAboutCashDispenserATM(10,10,10);
         System.out.println(taskAboutCashDispenserATM.moneyLeft());
-        System.out.println(taskAboutCashDispenserATM.withdrawMoneyFromATM(230));
+        System.out.println(taskAboutCashDispenserATM.withdrawMoneyFromATM(110));
         System.out.println(taskAboutCashDispenserATM.moneyLeft());
     }
 }
