@@ -38,8 +38,9 @@ public class Tast_runner {
 //        System.out.println(" Time (in miliseconds) for string minus time of stringbuffer is " + taskStringAndStringBufferComparation.compareStringAndStringBuffer());
 
         //Task Seven
-
-
-
+        TaskAboutCashDispenserATM taskAboutCashDispenserATM = new TaskAboutCashDispenserATM(10,10,10);
+        System.out.println(taskAboutCashDispenserATM.moneyLeft());
+        System.out.println(taskAboutCashDispenserATM.withdrawMoneyFromATM(230));
+        System.out.println(taskAboutCashDispenserATM.moneyLeft());
     }
 }
