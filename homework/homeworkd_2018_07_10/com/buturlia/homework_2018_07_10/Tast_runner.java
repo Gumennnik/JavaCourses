@@ -37,10 +37,14 @@ public class Tast_runner {
 //        TaskStringAndStringBufferComparation taskStringAndStringBufferComparation = new TaskStringAndStringBufferComparation("begining ");
 //        System.out.println(" Time (in miliseconds) for string minus time of stringbuffer is " + taskStringAndStringBufferComparation.compareStringAndStringBuffer());
 
-        //Task Seven
-        TaskAboutCashDispenserATM taskAboutCashDispenserATM = new TaskAboutCashDispenserATM(10,10,10);
-        System.out.println(taskAboutCashDispenserATM.moneyLeft());
-        System.out.println(taskAboutCashDispenserATM.withdrawMoneyFromATM(110));
-        System.out.println(taskAboutCashDispenserATM.moneyLeft());
+//        //Task Seven
+//        TaskAboutCashDispenserATM taskAboutCashDispenserATM = new TaskAboutCashDispenserATM(10,10,10);
+//        System.out.println(taskAboutCashDispenserATM.moneyLeft());
+//        System.out.println(taskAboutCashDispenserATM.withdrawMoneyFromATM(110));
+//        System.out.println(taskAboutCashDispenserATM.moneyLeft());
+        //Task eight
+
+
+
     }
 }
