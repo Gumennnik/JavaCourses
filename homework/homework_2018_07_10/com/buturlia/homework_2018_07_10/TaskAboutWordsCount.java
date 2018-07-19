@@ -19,7 +19,7 @@ public class TaskAboutWordsCount {
             if ( a.length() == 0){
                 continue;
             }
-            //System.out.println(a);
+//            System.out.println(a);
             count++;
         }
 

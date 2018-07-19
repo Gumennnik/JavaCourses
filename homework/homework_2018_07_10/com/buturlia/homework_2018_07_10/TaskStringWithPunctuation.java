@@ -32,6 +32,8 @@ public class TaskStringWithPunctuation {
 
         String allPunctuation = "!@#$%^&*(),.?";
 
+
+
         for (char punct:allPunctuation.toCharArray()
              ) {
 
