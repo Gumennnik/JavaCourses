@@ -27,11 +27,25 @@ public class Text {
 
     @Override
     public boolean equals(Object obj) {
-        return super.equals(obj);
+        if (this == obj) return true;
+        if (!(obj instanceof Text)) return false;
+        return this.toString().equals(obj.toString());
     }
 
     @Override
     public String toString() {
-        return super.toString();
+        String resultString = "";
+        for (Sentense s:text
+             ) {
+            resultString += s.toString();
+        }
+        return resultString;
     }
+
+
 }
+
+
+
+
+// 1 in 2 in 3 in 4 in 4 throw 3 catch 3 out 2 out 1 out

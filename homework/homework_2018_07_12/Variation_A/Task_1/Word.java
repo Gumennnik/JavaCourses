@@ -19,7 +19,7 @@ public class Word {
         if (this == o) return true;
         if (!(o instanceof Word)) return false;
         Word word1 = (Word) o;
-        return  getWord().equals(word1.getWord());
+        return  word.equals(word1.toString());
     }
 
 
