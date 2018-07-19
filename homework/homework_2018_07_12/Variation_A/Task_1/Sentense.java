@@ -42,16 +42,16 @@ public class Sentense {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Sentense sentense = (Sentense) o;
-        System.out.println("s1:" + sentense.toString());
-        System.out.println("s2:"+sentense.toString());
 
-        return sentence.toString().equals(sentense.toString());
+//        System.out.println("s1:" + this.toString());
+//        System.out.println("s2:"+sentense.toString());
+
+        return this.toString().equals(o.toString());
     }
 
     @Override
     public int hashCode() {
 
-        return Objects.hash(sentence);
+        return Objects.hash(this.toString());
     }
 }
