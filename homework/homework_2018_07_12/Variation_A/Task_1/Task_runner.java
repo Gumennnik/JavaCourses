@@ -19,7 +19,8 @@ public class Task_runner {
         System.out.println(" ");
         System.out.println(sentense.hashCode() == sentense2.hashCode());
 
-
+        Text text = new Text(sentense,sentense2);
+        System.out.println(text.toString());
 
 
     }
