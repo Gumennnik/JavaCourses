@@ -1,4 +1,17 @@
 package Variation_B;
 
-public class Task_1 {
+import java.io.Serializable;
+
+public class Task_1 implements Serializable {
+
+
+
+
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+
+
+
+        return super.clone();
+    }
 }
