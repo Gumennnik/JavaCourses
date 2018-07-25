@@ -17,5 +17,12 @@ public class Task_Runner {
         System.out.println(a.getClass());
         System.out.println(taskAboutConvertation.convertToList(a).getClass());
 
+
+        //Task2
+        //Написать класс, который умеет хранить в себе массив любых типов данных (int, long etc.).
+        //Реализовать метод get(int index), который возвращает любой элемент массива по индексу.
+
+
+
     }
 }
