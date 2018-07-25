@@ -7,14 +7,16 @@ public class Tast_runner {
 
 
 
-//        //TaskOne
-//        TaskGettingNumbersFromConsole taskGettingNumbersFromConsole = new TaskGettingNumbersFromConsole();
-//        taskGettingNumbersFromConsole.getInputFromCommandLine();
-//        taskGettingNumbersFromConsole.printSeparetedSymbols();
+        //TaskOne
+        TaskGettingNumbersFromConsole taskGettingNumbersFromConsole = new TaskGettingNumbersFromConsole();
+        taskGettingNumbersFromConsole.getInputFromCommandLine();
+        taskGettingNumbersFromConsole.printSeparetedSymbols();
 
 
 //        Task two
-//        TO DO
+
+        TaskAboutGuessing taskAboutGuessing = new TaskAboutGuessing();
+        taskAboutGuessing.tryToGuestt();
 
 
 
@@ -52,7 +54,7 @@ public class Tast_runner {
         System.out.println(taskAboutCashDispenserATM.withdrawMoneyFromATM(110));
         System.out.println(taskAboutCashDispenserATM.moneyLeft());
 
-        //Task eight
+//        //Task eight
 
 
 
