@@ -4,15 +4,38 @@ import java.awt.*;
 import java.util.ArrayList;
 
 public class TaskUniversalSaver  {
-    private List savedList = new List();
+    private ArrayList<Object> savedList;
+    public TaskUniversalSaver()
+    {
+        savedList = new ArrayList<Object>();
+    }
 
-//    public TaskUniversalSaver(Object... objects)
-//    {
-//        for (Object o:objects
-//             ) {
-//            savedList.add(o);
-//        }
-//    }
+    public void addElement(Object obj)
+    {
+        savedList.add(obj);
+        return;
+    }
 
+    public Object getElemet(int index)
+    {
+        try {
+            return savedList.get(index-1);
+        } catch (Exception e)
+        {
+            System.out.println("Invalid argument");
+            return null;
+//            e.printStackTrace();
+        }
+
+    }
+
+    public void printAllElementsToTerminal()
+    {
+        for (Object a: savedList
+             ) {
+            System.out.println(a);
+        }
+        return;
+    }
 
 }
