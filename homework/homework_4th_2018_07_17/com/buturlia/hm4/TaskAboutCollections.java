@@ -16,11 +16,11 @@ public class TaskAboutCollections {
     //Результат работы union: 1,2,3,5,7,8,1,6,9,14,3,7
     //Результат работы intersect: 1,3,7
 
-    public static HashSet union(Set set1, Set set2, Object a)
+    public static LinkedHashSet union(Set set1, Set set2)
     {
-        HashSet temporary = new HashSet();
-        System.out.println("added set1 " + temporary.add(set1));
-        System.out.println("added set2 " + temporary.add(set2));
+        LinkedHashSet temporary = new LinkedHashSet();
+        set1.iterator().forEachRemaining(s -> temporary.add(s));
+        set2.iterator().forEachRemaining(s -> temporary.add(s));
         return temporary;
     }
 }

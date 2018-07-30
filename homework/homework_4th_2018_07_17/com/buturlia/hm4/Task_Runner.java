@@ -14,7 +14,7 @@ public class Task_Runner{
 //        String[] a = {"abcd" , "efg", "higk" , "lmn"};
 //        TaskAboutConvertation taskAboutConvertation = new TaskAboutConvertation();
 //
-        Double[] b = {1.0 , 2.0 , 3.0 , 4.0 , 5.0 , 6.0};
+//        Double[] b = {1.0 , 2.0 , 3.0 , 4.0 , 5.0 , 6.0};
 //        System.out.println(a.getClass());
 //        System.out.println(taskAboutConvertation.convertToList(a).getClass());
 
@@ -51,10 +51,37 @@ public class Task_Runner{
         //Коллекция 2: 1,6,9,14,3,7
         //Результат работы union: 1,2,3,5,7,8,1,6,9,14,3,7
         //Результат работы intersect: 1,3,7
-        HashSet set1 = new LinkedHashSet(Collections.singleton(new int[]{1,2,3,5,7,8}));
-        set1.forEach((s) -> {
-            System.out.println(s);
+        int[] firstSetNumbers = {1,2,3,5,7,8};
+        int[] secondSetNumbers = {1,6,9,14,3,7};
+
+        HashSet set1 = new LinkedHashSet();
+        HashSet set2 = new LinkedHashSet();
+        //adding elements to out set
+        for (int i = 0; i < firstSetNumbers.length; i++) {
+            set1.add(firstSetNumbers[i]);
+        }
+
+        for (int i = 0; i < secondSetNumbers.length; i++) {
+            set2.add(secondSetNumbers[i]);
+        }
+
+        //showing, what we have in our set
+        System.out.println( " set1 is ");
+        set1.iterator().forEachRemaining((s) -> {
+            System.out.print(s + " ");
+        }
+        );
+        System.out.println(" ");
+        System.out.println(" set2 is ");
+        set2.iterator().forEachRemaining((s) ->{
+            System.out.print(s + " ");
         });
+
+        Set union = TaskAboutCollections.union(set1,set2);
+        System.out.println(" ");
+        union.iterator().forEachRemaining((s) -> System.out.print(s + " "));
+
+
 
     }
 
