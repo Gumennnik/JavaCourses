@@ -1,6 +1,7 @@
 package com.buturlia.hm4;
 
 
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.LinkedHashSet;
 import java.util.Set;
@@ -16,11 +17,20 @@ public class TaskAboutCollections {
     //Результат работы union: 1,2,3,5,7,8,1,6,9,14,3,7
     //Результат работы intersect: 1,3,7
 
-    public static LinkedHashSet union(Set set1, Set set2)
+    public static ArrayList union(Set set1, Set set2)
     {
-        LinkedHashSet temporary = new LinkedHashSet();
+        ArrayList temporary = new ArrayList();
         set1.iterator().forEachRemaining(s -> temporary.add(s));
         set2.iterator().forEachRemaining(s -> temporary.add(s));
         return temporary;
     }
+
+    public static Set intersect(Set set1, Set set2){
+        Set temporary = new LinkedHashSet();
+        set1.retainAll(set2);
+        temporary.addAll(set1);
+        return temporary;
+    }
+
+
 }

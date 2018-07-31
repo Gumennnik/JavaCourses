@@ -77,12 +77,13 @@ public class Task_Runner{
             System.out.print(s + " ");
         });
 
-        Set union = TaskAboutCollections.union(set1,set2);
+        ArrayList union = TaskAboutCollections.union(set1,set2);
         System.out.println(" ");
         union.iterator().forEachRemaining((s) -> System.out.print(s + " "));
 
-
-
+        Set intersect = TaskAboutCollections.intersect(set1,set2);
+        System.out.println(" ");
+        intersect.iterator().forEachRemaining((s) -> System.out.print(s + " "));
     }
 
 }
