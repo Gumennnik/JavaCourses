@@ -43,47 +43,44 @@ public class Task_Runner{
 //        });
 //        Student.printStudents(students,students.get(0).getCourse());
 
-        //Task 4
-        //Задача 4:
-        //Напишите методы union(Set set1, Set set2) и intersect(Set set1, Set set2), реализующих операции объединения и пересечения двух множеств. Протестируйте работу этих методах на двух предварительно заполненных множествах. (Вам понадобится написать вспомогательный метод, выводящий все элементы множества в консоль).
-        //Под пересечением слудует понимать выделение в коллекцию объектов, содержащихся в каждой из коллекций (т.е. одинаковых элементов, встречающихся в каждой коллекции).
-        //Коллекция 1: 1,2,3,5,7,8
-        //Коллекция 2: 1,6,9,14,3,7
-        //Результат работы union: 1,2,3,5,7,8,1,6,9,14,3,7
-        //Результат работы intersect: 1,3,7
-        int[] firstSetNumbers = {1,2,3,5,7,8};
-        int[] secondSetNumbers = {1,6,9,14,3,7};
+//        //Task 4
+//
+//        int[] firstSetNumbers = {1,2,3,5,7,8};
+//        int[] secondSetNumbers = {1,6,9,14,3,7};
+//
+//        HashSet set1 = new LinkedHashSet();
+//        HashSet set2 = new LinkedHashSet();
+//        //adding elements to out set
+//        for (int i = 0; i < firstSetNumbers.length; i++) {
+//            set1.add(firstSetNumbers[i]);
+//        }
+//
+//        for (int i = 0; i < secondSetNumbers.length; i++) {
+//            set2.add(secondSetNumbers[i]);
+//        }
+//
+//        //showing, what we have in our set
+//        System.out.println( " set1 is ");
+//        set1.iterator().forEachRemaining((s) -> {
+//            System.out.print(s + " ");
+//        }
+//        );
+//        System.out.println(" ");
+//        System.out.println(" set2 is ");
+//        set2.iterator().forEachRemaining((s) ->{
+//            System.out.print(s + " ");
+//        });
+//
+//        ArrayList union = TaskAboutCollections.union(set1,set2);
+//        System.out.println(" ");
+//        union.iterator().forEachRemaining((s) -> System.out.print(s + " "));
+//
+//        Set intersect = TaskAboutCollections.intersect(set1,set2);
+//        System.out.println(" ");
+//        intersect.iterator().forEachRemaining((s) -> System.out.print(s + " "));
 
-        HashSet set1 = new LinkedHashSet();
-        HashSet set2 = new LinkedHashSet();
-        //adding elements to out set
-        for (int i = 0; i < firstSetNumbers.length; i++) {
-            set1.add(firstSetNumbers[i]);
-        }
 
-        for (int i = 0; i < secondSetNumbers.length; i++) {
-            set2.add(secondSetNumbers[i]);
-        }
 
-        //showing, what we have in our set
-        System.out.println( " set1 is ");
-        set1.iterator().forEachRemaining((s) -> {
-            System.out.print(s + " ");
-        }
-        );
-        System.out.println(" ");
-        System.out.println(" set2 is ");
-        set2.iterator().forEachRemaining((s) ->{
-            System.out.print(s + " ");
-        });
-
-        ArrayList union = TaskAboutCollections.union(set1,set2);
-        System.out.println(" ");
-        union.iterator().forEachRemaining((s) -> System.out.print(s + " "));
-
-        Set intersect = TaskAboutCollections.intersect(set1,set2);
-        System.out.println(" ");
-        intersect.iterator().forEachRemaining((s) -> System.out.print(s + " "));
     }
 
 }
