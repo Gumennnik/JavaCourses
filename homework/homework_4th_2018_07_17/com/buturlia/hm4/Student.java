@@ -2,7 +2,7 @@ package com.buturlia.hm4;
 
 import java.util.List;
 
-public class Student {
+public class Student implements Comparable {
 
     //Напишите класс Student, предоставляющий информацию об имени студента методом getName() и о его курсе методом getCourse().
     //Напишите метод printStudents(List students, int course), который получает список студентов и номер курса и печатает в консоль имена тех студентов из списка, которые обучаются на данном курсе. Для обхода списка в этом методе используйте итератор.
@@ -49,4 +49,9 @@ public class Student {
         return;
     }
 
+    @Override
+    public int compareTo(Object o) {
+        if( !(o instanceof Student)) return -100;
+        return (int) (this.getEveragaGrade() - ((Student) o).getEveragaGrade());
+    }
 }
