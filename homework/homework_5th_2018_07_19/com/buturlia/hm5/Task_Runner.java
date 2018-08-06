@@ -1,82 +1,49 @@
 package com.buturlia.hm5;
 import com.buturlia.hm4.Student;
+import netscape.security.UserDialogHelper;
 
 import java.util.*;
+import java.util.function.Consumer;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
 public class Task_Runner {
     public static void main(String[] args) {
 
+
+//        //First task
+//        ListAndSetComparingClass firstTask = new ListAndSetComparingClass();
+//        firstTask.generateStudents();
+//        firstTask.removeStudents();
+
+
+        //Second task
+        //generating Users
         String[] firstNames = {"Vasya", "Petya", "Kolya", "Natasha", "Abdula", "Ahmed", "Aladin"} ;
-        String[] secondNames = {"Petrov", "Sidorov", "Stalin", "Lenin", "Djugeshvili", "Saakesian"};
         Random random = new Random();
+        List<User> firstList = new ArrayList<>();
+        List<User> secondList = new ArrayList<>();
 
-        Function<List, List> generateStudents = list -> {
-            try {
-                for (int i = 0; i < 10000 ; i++) {
-                    list.add(new Student( firstNames[random.nextInt(firstNames.length -1 )],secondNames[random.nextInt(secondNames.length -1)], random.nextInt(5), random.nextDouble()*10));
+
+        for (int i = 0; i < 5000 ; i++) {
+            firstList.add(new User(firstNames[random.nextInt(firstNames.length) ],random ));
+            secondList.add(new User(firstNames[random.nextInt(firstNames.length) ],random ));
+        }
+
+        List<User> thirdList = firstList.parallelStream().filter( ( User user ) -> {
+                if( secondList.indexOf(user) != -1 )
+                {
+                    System.out.println("Found");
+                    return true;
+                }else{
+                    return false;
                 }
+           }).collect(Collectors.toList() );
 
-            } catch (Exception e)
-            {
-                System.out.println("Error in " + list.getClass());
-            }
-            System.out.println(list.getClass() + " size is " + list.size());
-            return list;
-        };
+        System.out.println(firstList.size());
+        System.out.println(secondList.size());
 
-        LinkedList<Student> linkedListStudents = new LinkedList<Student>();
-        long linkedListTime =  Calendar.getInstance().get(Calendar.MILLISECOND);
-        generateStudents.apply(linkedListStudents);
-        System.out.println("Linked list lenght is " + linkedListStudents.size());
-        linkedListTime = linkedListTime - Calendar.getInstance().get(Calendar.MILLISECOND);
-        System.out.println(linkedListTime);
-        System.out.println(linkedListStudents.getFirst().getName());
-
-
-        ArrayList<Student> arrayListStudents = new ArrayList<Student>();
-        long arrayListTime =  Calendar.getInstance().get(Calendar.MILLISECOND);
-        System.out.println(arrayListTime);
-        try {
-            for (int i = 0; i < 10000 ; i++) {
-                arrayListStudents.add(new Student( firstNames[random.nextInt(firstNames.length -1 )],secondNames[random.nextInt(secondNames.length -1)], random.nextInt(5), random.nextDouble()*10));
-//                System.out.println("Added to arraylist");
-            }
-        }catch (Exception e)
-        {
-            System.out.println("Error in ArrayList");
-        }
-        arrayListTime = arrayListTime - Calendar.getInstance().get(Calendar.MILLISECOND);
-        System.out.println(arrayListTime);
-
-        TreeSet<Student> treeSetStudents = new TreeSet<Student>();
-        long treeSetTime = Calendar.getInstance().get(Calendar.MILLISECOND);
-        try{
-            for (int i = 0; i < 10000 ; i++) {
-                treeSetStudents.add(new Student( firstNames[random.nextInt(firstNames.length -1 )],secondNames[random.nextInt(secondNames.length -1)], random.nextInt(5), random.nextDouble()*10));
-            }
-        }catch (Exception e)
-        {
-            System.out.println("Error in TreeSet");
-            e.printStackTrace();
-        }
-        treeSetTime = treeSetTime - Calendar.getInstance().get(Calendar.MILLISECOND);
-
-        HashSet<Student> hashSetStudents = new HashSet<Student>();
-        long hashSetTime = Calendar.getInstance().get(Calendar.MILLISECOND);
-        try{
-            for (int i = 0; i < 10000; i++) {
-                hashSetStudents.add(new Student( firstNames[random.nextInt(firstNames.length -1 )],secondNames[random.nextInt(secondNames.length -1)], random.nextInt(5), random.nextDouble()*10));
-            }
-        }catch (Exception e){
-            System.out.println("Error in HashSet");
-        }
-        hashSetTime = hashSetTime - Calendar.getInstance().get(Calendar.MILLISECOND);
-
-        System.out.println("LinkedList time (ms) is " + linkedListTime);
-        System.out.println("Arraylist time (ms) is " + arrayListTime);
-        System.out.println("TreeSet time (ms) is  " + treeSetTime);
-        System.out.println("HashSet time (ms) is "+ treeSetTime);
+        System.out.println("Done, third list size is " + thirdList.size());
 
     }
 }

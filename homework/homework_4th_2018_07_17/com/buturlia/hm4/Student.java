@@ -51,7 +51,7 @@ public class Student implements Comparable {
 
     @Override
     public int compareTo(Object o) {
-        if( !(o instanceof Student)) return -100;
-        return (int) (this.getEveragaGrade() - ((Student) o).getEveragaGrade());
+        if( !(o instanceof Student)) return 200;
+        return this.toString().indexOf(o.toString());
     }
 }
