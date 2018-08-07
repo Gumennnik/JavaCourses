@@ -18,7 +18,7 @@ public class User {
     private void generateDate(Random random)
     {
         dateOfBirth = new GregorianCalendar();
-        dateOfBirth.set((1900 + random.nextInt(110)) , random.nextInt(12) , random.nextInt(28) );
+        dateOfBirth.set((2000 + random.nextInt(10)) , random.nextInt(12) , random.nextInt(28) );
         return;
 
     }

@@ -30,7 +30,7 @@ public class Task_Runner {
             secondList.add(new User(firstNames[random.nextInt(firstNames.length) ],random ));
         }
 
-        List<User> thirdList = firstList.parallelStream().filter( ( User user ) -> {
+        List<User> thirdList = firstList.stream().filter( ( User user ) -> {
                 if( secondList.indexOf(user) != -1 )
                 {
                     System.out.println("Found");
