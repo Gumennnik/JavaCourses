@@ -15,9 +15,14 @@
       <sourceFolder url="file://$MODULE_DIR$/homework_4th_2018_07_17" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/homework_5th_2018_07_19" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/homework_6th_2018_07_26" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/homework_7th_2018_08_05" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/homework_8th" isTestSource="false" />
     </content>
     <content url="file://$MODULE_DIR$/build" />
     <orderEntry type="jdk" jdkName="1.8" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="mysql:mysql-connector-java:3.1.11" level="application" />
+    <orderEntry type="library" name="mysql:mysql-connector-java:8.0.12" level="application" />
+    <orderEntry type="library" name="org.ops4j.pax.jdbc:pax-jdbc-mysql:1.1.0" level="application" />
   </component>
 </module>

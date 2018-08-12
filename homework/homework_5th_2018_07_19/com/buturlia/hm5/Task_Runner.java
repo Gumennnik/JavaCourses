@@ -1,11 +1,6 @@
 package com.buturlia.hm5;
-import com.buturlia.hm4.Student;
-import netscape.security.UserDialogHelper;
 
 import java.util.*;
-import java.util.function.Consumer;
-import java.util.function.Function;
-import java.util.stream.Collectors;
 
 public class Task_Runner {
     public static void main(String[] args) {
