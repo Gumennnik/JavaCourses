@@ -1,12 +1,26 @@
-public class LibraryBook {
+package com.buturlia.hm8;
+
+public class LibraryBook  {
     private int bookId;
     private String bookName;
+    private static LibrarryConnector librarryConnector;
 
 
     public LibraryBook(int bookId, String bookName) {
         this.bookId = bookId;
         this.bookName = bookName;
+        librarryConnector = LibrarryConnector.getInstance();
     }
+
+
+    public static boolean addNewBookToLibrary()
+    {
+
+
+        return false;
+    }
+
+
 
 
 
